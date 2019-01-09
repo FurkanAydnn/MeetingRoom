@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace MeetingRoom
 {
-    public partial class Form1 : Form
+    public partial class MeetingRoomMain : Form
     {
-        public Form1()
+        public MeetingRoomMain()
         {
             InitializeComponent();
         }
