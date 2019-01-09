@@ -59,6 +59,7 @@
             this.btnCreateMeeting.TabIndex = 2;
             this.btnCreateMeeting.Text = "Rezervasyon";
             this.btnCreateMeeting.UseVisualStyleBackColor = true;
+            this.btnCreateMeeting.Click += new System.EventHandler(this.btnCreateMeeting_Click);
             // 
             // btnMeetingCancel
             // 

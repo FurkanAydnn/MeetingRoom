@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MeetingRoom.Forms;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -17,16 +18,9 @@ namespace MeetingRoom
             InitializeComponent();
         }
 
-        //private void InitializeComponent()
-        //{
-        //    this.SuspendLayout();
-        //    // 
-        //    // MeetingRoomMain
-        //    // 
-        //    this.ClientSize = new System.Drawing.Size(404, 327);
-        //    this.Name = "MeetingRoomMain";
-        //    this.ResumeLayout(false);
-
-        //}
+        private void btnCreateMeeting_Click(object sender, EventArgs e)
+        {
+            new CreateMeeting().Show();
+        }
     }
 }

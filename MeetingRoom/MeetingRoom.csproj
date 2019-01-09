@@ -76,6 +76,12 @@
     <Compile Include="Employees.cs">
       <DependentUpon>MeetingRoomDBModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="Forms\CreateMeeting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\CreateMeeting.Designer.cs">
+      <DependentUpon>CreateMeeting.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\MeetingRoomMain.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -105,6 +111,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Forms\CreateMeeting.resx">
+      <DependentUpon>CreateMeeting.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\MeetingRoomMain.resx">
       <DependentUpon>MeetingRoomMain.cs</DependentUpon>
     </EmbeddedResource>
