@@ -21,7 +21,6 @@ namespace MeetingRoom
         }
     
         public int RoomID { get; set; }
-        public Nullable<int> MeetingID { get; set; }
         public string RoomName { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

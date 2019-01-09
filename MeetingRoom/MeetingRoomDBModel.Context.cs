@@ -13,10 +13,10 @@ namespace MeetingRoom
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class MeetingRoomDBEntities1 : DbContext
+    public partial class MeetingRoomDBEntities : DbContext
     {
-        public MeetingRoomDBEntities1()
-            : base("name=MeetingRoomDBEntities1")
+        public MeetingRoomDBEntities()
+            : base("name=MeetingRoomDBEntities")
         {
         }
     
@@ -29,5 +29,6 @@ namespace MeetingRoom
         public virtual DbSet<Employees> Employees { get; set; }
         public virtual DbSet<MeetingRooms> MeetingRooms { get; set; }
         public virtual DbSet<Meetings> Meetings { get; set; }
+        public virtual DbSet<sysdiagrams> sysdiagrams { get; set; }
     }
 }
