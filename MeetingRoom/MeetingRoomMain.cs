@@ -16,5 +16,17 @@ namespace MeetingRoom
         {
             InitializeComponent();
         }
+
+        //private void InitializeComponent()
+        //{
+        //    this.SuspendLayout();
+        //    // 
+        //    // MeetingRoomMain
+        //    // 
+        //    this.ClientSize = new System.Drawing.Size(404, 327);
+        //    this.Name = "MeetingRoomMain";
+        //    this.ResumeLayout(false);
+
+        //}
     }
 }
