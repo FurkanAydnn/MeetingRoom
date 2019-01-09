@@ -13,10 +13,10 @@ namespace MeetingRoom
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class MeetingRoomDBEntities : DbContext
+    public partial class MeetingRoomDBEntities1 : DbContext
     {
-        public MeetingRoomDBEntities()
-            : base("name=MeetingRoomDBEntities")
+        public MeetingRoomDBEntities1()
+            : base("name=MeetingRoomDBEntities1")
         {
         }
     

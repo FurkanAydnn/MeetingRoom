@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-    <Schema Namespace="MeetingRoomDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+      <Schema Namespace="MeetingRoomDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Companies">
           <Key>
             <PropertyRef Name="CompanyID" />
@@ -36,7 +36,7 @@
           </Key>
           <Property Name="MeetingID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Date" Type="date" Nullable="false" />
-          <Property Name="Hour" Type="int" Nullable="false" />
+          <Property Name="Hour" Type="time" Precision="0" Nullable="false" />
           <Property Name="CompanyID" Type="int" Nullable="false" />
           <Property Name="MeetingRoomID" Type="int" Nullable="false" />
           <Property Name="Description" Type="nvarchar" MaxLength="200" />
@@ -95,7 +95,8 @@
             <End Role="Meetings" EntitySet="Meetings" />
           </AssociationSet>
         </EntityContainer>
-      </Schema></edmx:StorageModels>
+      </Schema>
+    </edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="MeetingRoomDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -134,12 +135,12 @@
           </Key>
           <Property Name="MeetingID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Date" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="Hour" Type="Time" Nullable="false" Precision="0" />
           <Property Name="CompanyID" Type="Int32" Nullable="false" />
           <Property Name="MeetingRoomID" Type="Int32" Nullable="false" />
           <Property Name="Description" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="Companies" Relationship="Self.FK_Meetings_Companies" FromRole="Meetings" ToRole="Companies" />
           <NavigationProperty Name="MeetingRooms" Relationship="Self.FK_Meetings_MeetingRooms" FromRole="Meetings" ToRole="MeetingRooms" />
-          <Property Name="Hour" Type="Int32" Nullable="false" />
         </EntityType>
         <Association Name="FK_Employees_Companies">
           <End Role="Companies" Type="Self.Companies" Multiplicity="1" />
@@ -177,7 +178,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="MeetingRoomDBEntities" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="MeetingRoomDBEntities1" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Companies" EntityType="Self.Companies" />
           <EntitySet Name="Employees" EntityType="Self.Employees" />
           <EntitySet Name="MeetingRooms" EntityType="Self.MeetingRooms" />
@@ -200,7 +201,7 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="MeetingRoomDBModelStoreContainer" CdmEntityContainer="MeetingRoomDBEntities">
+        <EntityContainerMapping StorageEntityContainer="MeetingRoomDBModelStoreContainer" CdmEntityContainer="MeetingRoomDBEntities1">
           <EntitySetMapping Name="Companies">
             <EntityTypeMapping TypeName="MeetingRoomDBModel.Companies">
               <MappingFragment StoreEntitySet="Companies">
@@ -232,9 +233,9 @@
           <EntitySetMapping Name="Meetings">
             <EntityTypeMapping TypeName="MeetingRoomDBModel.Meetings">
               <MappingFragment StoreEntitySet="Meetings">
-                <ScalarProperty Name="Hour" ColumnName="Hour" />
                 <ScalarProperty Name="MeetingID" ColumnName="MeetingID" />
                 <ScalarProperty Name="Date" ColumnName="Date" />
+                <ScalarProperty Name="Hour" ColumnName="Hour" />
                 <ScalarProperty Name="CompanyID" ColumnName="CompanyID" />
                 <ScalarProperty Name="MeetingRoomID" ColumnName="MeetingRoomID" />
                 <ScalarProperty Name="Description" ColumnName="Description" />

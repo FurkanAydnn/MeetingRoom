@@ -16,6 +16,7 @@ namespace MeetingRoom
     {
         public int MeetingID { get; set; }
         public System.DateTime Date { get; set; }
+        public System.TimeSpan Hour { get; set; }
         public int CompanyID { get; set; }
         public int MeetingRoomID { get; set; }
         public string Description { get; set; }
