@@ -22,5 +22,12 @@ namespace MeetingRoom
         {
             new CreateMeeting().Show();
         }
+
+        private void btnCreateRoom_Click(object sender, EventArgs e)
+        {
+            CreateRoom form = new CreateRoom();
+            this.Visible = false;
+            form.Show();
+        }
     }
 }
