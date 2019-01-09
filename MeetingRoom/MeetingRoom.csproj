@@ -76,10 +76,10 @@
     <Compile Include="Employees.cs">
       <DependentUpon>MeetingRoomDBModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="MeetingRoomMain.cs">
+    <Compile Include="Forms\MeetingRoomMain.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MeetingRoomMain.Designer.cs">
+    <Compile Include="Forms\MeetingRoomMain.Designer.cs">
       <DependentUpon>MeetingRoomMain.cs</DependentUpon>
     </Compile>
     <Compile Include="MeetingRoomDBModel.Context.cs">
@@ -105,7 +105,7 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="MeetingRoomMain.resx">
+    <EmbeddedResource Include="Forms\MeetingRoomMain.resx">
       <DependentUpon>MeetingRoomMain.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
