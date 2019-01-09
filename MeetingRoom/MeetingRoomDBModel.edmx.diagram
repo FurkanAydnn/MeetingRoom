@@ -4,11 +4,12 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="7681e00bc10749de895d6be8e226f5b4" Name="Diagram1">
-        <EntityTypeShape EntityType="MeetingRoomDBModel.Companies" Width="1.5" PointX="0.75" PointY="3.75" IsExpanded="true" />
+      <Diagram DiagramId="c98b284f858a4948b54a3f2645beafcb" Name="Diagram1">
+        <EntityTypeShape EntityType="MeetingRoomDBModel.Companies" Width="1.5" PointX="0.75" PointY="3.625" IsExpanded="true" />
         <EntityTypeShape EntityType="MeetingRoomDBModel.Employees" Width="1.5" PointX="3" PointY="3.5" IsExpanded="true" />
         <EntityTypeShape EntityType="MeetingRoomDBModel.MeetingRooms" Width="1.5" PointX="3.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="MeetingRoomDBModel.Meetings" Width="1.5" PointX="6" PointY="3.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="MeetingRoomDBModel.Meetings" Width="1.5" PointX="6" PointY="3.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="MeetingRoomDBModel.sysdiagrams" Width="1.5" PointX="0.75" PointY="6.5" IsExpanded="true" />
         <AssociationConnector Association="MeetingRoomDBModel.FK_Employees_Companies" ManuallyRouted="false" />
         <AssociationConnector Association="MeetingRoomDBModel.FK_Meetings_Companies" ManuallyRouted="false" />
         <AssociationConnector Association="MeetingRoomDBModel.FK_Meetings_MeetingRooms" ManuallyRouted="false" />
