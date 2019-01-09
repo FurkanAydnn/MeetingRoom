@@ -28,35 +28,44 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lbl_RoomName = new System.Windows.Forms.Label();
+            this.tb_RoomName = new System.Windows.Forms.TextBox();
+            this.btn_RoomAdd = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // label1
+            // lbl_RoomName
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(13, 13);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(35, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "label1";
+            this.lbl_RoomName.AutoSize = true;
+            this.lbl_RoomName.Location = new System.Drawing.Point(24, 36);
+            this.lbl_RoomName.Name = "lbl_RoomName";
+            this.lbl_RoomName.Size = new System.Drawing.Size(48, 13);
+            this.lbl_RoomName.TabIndex = 0;
+            this.lbl_RoomName.Text = "Oda Adı:";
             // 
-            // label2
+            // tb_RoomName
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(13, 39);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(35, 13);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "label2";
+            this.tb_RoomName.Location = new System.Drawing.Point(97, 36);
+            this.tb_RoomName.Name = "tb_RoomName";
+            this.tb_RoomName.Size = new System.Drawing.Size(140, 20);
+            this.tb_RoomName.TabIndex = 1;
+            // 
+            // btn_RoomAdd
+            // 
+            this.btn_RoomAdd.Location = new System.Drawing.Point(162, 113);
+            this.btn_RoomAdd.Name = "btn_RoomAdd";
+            this.btn_RoomAdd.Size = new System.Drawing.Size(75, 23);
+            this.btn_RoomAdd.TabIndex = 2;
+            this.btn_RoomAdd.Text = "Ekle";
+            this.btn_RoomAdd.UseVisualStyleBackColor = true;
             // 
             // CreateRoom
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(372, 253);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.ClientSize = new System.Drawing.Size(284, 182);
+            this.Controls.Add(this.btn_RoomAdd);
+            this.Controls.Add(this.tb_RoomName);
+            this.Controls.Add(this.lbl_RoomName);
             this.Name = "CreateRoom";
             this.Text = "CreateRoom";
             this.ResumeLayout(false);
@@ -66,7 +75,8 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lbl_RoomName;
+        private System.Windows.Forms.TextBox tb_RoomName;
+        private System.Windows.Forms.Button btn_RoomAdd;
     }
 }
