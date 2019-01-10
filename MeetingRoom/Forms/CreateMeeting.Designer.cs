@@ -28,41 +28,43 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.dtpDate = new System.Windows.Forms.DateTimePicker();
+            this.rtbDescription = new System.Windows.Forms.RichTextBox();
+            this.cbCompanies = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.flpHours = new System.Windows.Forms.FlowLayoutPanel();
             this.btnCreateMeeting = new System.Windows.Forms.Button();
+            this.cbMeetingRoom = new System.Windows.Forms.ComboBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // dateTimePicker1
+            // dtpDate
             // 
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(311, 14);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(108, 20);
-            this.dateTimePicker1.TabIndex = 0;
+            this.dtpDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpDate.Location = new System.Drawing.Point(311, 14);
+            this.dtpDate.Name = "dtpDate";
+            this.dtpDate.Size = new System.Drawing.Size(108, 20);
+            this.dtpDate.TabIndex = 0;
             // 
-            // richTextBox1
+            // rtbDescription
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(103, 57);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(123, 96);
-            this.richTextBox1.TabIndex = 3;
-            this.richTextBox1.Text = "";
+            this.rtbDescription.Location = new System.Drawing.Point(103, 67);
+            this.rtbDescription.Name = "rtbDescription";
+            this.rtbDescription.Size = new System.Drawing.Size(142, 96);
+            this.rtbDescription.TabIndex = 3;
+            this.rtbDescription.Text = "";
             // 
-            // comboBox1
+            // cbCompanies
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(103, 13);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(123, 21);
-            this.comboBox1.TabIndex = 4;
+            this.cbCompanies.FormattingEnabled = true;
+            this.cbCompanies.Location = new System.Drawing.Point(103, 13);
+            this.cbCompanies.Name = "cbCompanies";
+            this.cbCompanies.Size = new System.Drawing.Size(142, 21);
+            this.cbCompanies.TabIndex = 4;
             // 
             // label1
             // 
@@ -76,7 +78,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(12, 60);
+            this.label2.Location = new System.Drawing.Point(12, 70);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(85, 13);
             this.label2.TabIndex = 6;
@@ -94,7 +96,7 @@
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.flpHours);
-            this.groupBox1.Location = new System.Drawing.Point(266, 53);
+            this.groupBox1.Location = new System.Drawing.Point(274, 67);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(153, 100);
             this.groupBox1.TabIndex = 9;
@@ -112,26 +114,46 @@
             // 
             // btnCreateMeeting
             // 
-            this.btnCreateMeeting.Location = new System.Drawing.Point(344, 156);
+            this.btnCreateMeeting.Location = new System.Drawing.Point(352, 170);
             this.btnCreateMeeting.Name = "btnCreateMeeting";
             this.btnCreateMeeting.Size = new System.Drawing.Size(75, 23);
             this.btnCreateMeeting.TabIndex = 10;
             this.btnCreateMeeting.Text = "Kaydet";
             this.btnCreateMeeting.UseVisualStyleBackColor = true;
+            this.btnCreateMeeting.Click += new System.EventHandler(this.btnCreateMeeting_Click);
+            // 
+            // cbMeetingRoom
+            // 
+            this.cbMeetingRoom.FormattingEnabled = true;
+            this.cbMeetingRoom.Location = new System.Drawing.Point(103, 40);
+            this.cbMeetingRoom.Name = "cbMeetingRoom";
+            this.cbMeetingRoom.Size = new System.Drawing.Size(142, 21);
+            this.cbMeetingRoom.TabIndex = 11;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(16, 43);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(81, 13);
+            this.label4.TabIndex = 12;
+            this.label4.Text = "Toplantı Odası: ";
             // 
             // CreateMeeting
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(439, 191);
+            this.ClientSize = new System.Drawing.Size(439, 208);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.cbMeetingRoom);
             this.Controls.Add(this.btnCreateMeeting);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.richTextBox1);
-            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.cbCompanies);
+            this.Controls.Add(this.rtbDescription);
+            this.Controls.Add(this.dtpDate);
             this.Name = "CreateMeeting";
             this.Text = "Rezervasyon Oluştur";
             this.Load += new System.EventHandler(this.CreateMeeting_Load);
@@ -143,14 +165,16 @@
 
         #endregion
 
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.RichTextBox richTextBox1;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.DateTimePicker dtpDate;
+        private System.Windows.Forms.RichTextBox rtbDescription;
+        private System.Windows.Forms.ComboBox cbCompanies;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.FlowLayoutPanel flpHours;
         private System.Windows.Forms.Button btnCreateMeeting;
+        private System.Windows.Forms.ComboBox cbMeetingRoom;
+        private System.Windows.Forms.Label label4;
     }
 }
