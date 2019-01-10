@@ -34,5 +34,10 @@ namespace MeetingRoom
             CreateCompanies form = new CreateCompanies();
             form.Show();
         }
+
+        private void btnMeetingCancel_Click(object sender, EventArgs e)
+        {
+            new CancelMeeting().Show();
+        }
     }
 }
