@@ -10,18 +10,13 @@
 namespace MeetingRoom
 {
     using System;
-    using System.Collections.Generic;
     
-    public partial class Meetings
+    public partial class sp_helpdiagrams_Result
     {
-        public int MeetingID { get; set; }
-        public System.DateTime Date { get; set; }
-        public int HourID { get; set; }
-        public int CompanyID { get; set; }
-        public int MeetingRoomID { get; set; }
-        public string Description { get; set; }
-    
-        public virtual Companies Companies { get; set; }
-        public virtual MeetingRooms MeetingRooms { get; set; }
+        public string Database { get; set; }
+        public string Name { get; set; }
+        public int ID { get; set; }
+        public string Owner { get; set; }
+        public int OwnerID { get; set; }
     }
 }
