@@ -34,10 +34,21 @@ namespace MeetingRoom.Forms
             lb_Rooms.ValueMember = "RoomID";
             lb_Rooms.DataSource = db.MeetingRooms.Select(x => new
             {
-                x.RoomName   
+                x.RoomName,
+                x.RoomID
             })
             .ToList();
         }
 
+        private void btn_DeleteRoom_Click(object sender, EventArgs e)
+        {
+            var room = (from r in db.MeetingRooms
+                        where r.RoomID == (int)lb_Rooms.SelectedValue
+                        select r).SingleOrDefault();
+            db.MeetingRooms.Remove(room);
+            db.SaveChanges();
+
+            CreateRoom_Load(sender, e);
+        }
     }
 }

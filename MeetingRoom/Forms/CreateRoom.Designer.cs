@@ -32,12 +32,13 @@
             this.tb_RoomName = new System.Windows.Forms.TextBox();
             this.btn_RoomAdd = new System.Windows.Forms.Button();
             this.lb_Rooms = new System.Windows.Forms.ListBox();
+            this.btn_DeleteRoom = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lbl_RoomName
             // 
             this.lbl_RoomName.AutoSize = true;
-            this.lbl_RoomName.Location = new System.Drawing.Point(24, 36);
+            this.lbl_RoomName.Location = new System.Drawing.Point(24, 23);
             this.lbl_RoomName.Name = "lbl_RoomName";
             this.lbl_RoomName.Size = new System.Drawing.Size(48, 13);
             this.lbl_RoomName.TabIndex = 0;
@@ -45,16 +46,16 @@
             // 
             // tb_RoomName
             // 
-            this.tb_RoomName.Location = new System.Drawing.Point(97, 36);
+            this.tb_RoomName.Location = new System.Drawing.Point(97, 23);
             this.tb_RoomName.Name = "tb_RoomName";
             this.tb_RoomName.Size = new System.Drawing.Size(140, 20);
             this.tb_RoomName.TabIndex = 1;
             // 
             // btn_RoomAdd
             // 
-            this.btn_RoomAdd.Location = new System.Drawing.Point(160, 60);
+            this.btn_RoomAdd.Location = new System.Drawing.Point(187, 49);
             this.btn_RoomAdd.Name = "btn_RoomAdd";
-            this.btn_RoomAdd.Size = new System.Drawing.Size(75, 23);
+            this.btn_RoomAdd.Size = new System.Drawing.Size(50, 23);
             this.btn_RoomAdd.TabIndex = 2;
             this.btn_RoomAdd.Text = "Ekle";
             this.btn_RoomAdd.UseVisualStyleBackColor = true;
@@ -62,18 +63,28 @@
             // 
             // lb_Rooms
             // 
-            this.lb_Rooms.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.lb_Rooms.FormattingEnabled = true;
-            this.lb_Rooms.Location = new System.Drawing.Point(0, 111);
+            this.lb_Rooms.Location = new System.Drawing.Point(3, 91);
             this.lb_Rooms.Name = "lb_Rooms";
-            this.lb_Rooms.Size = new System.Drawing.Size(256, 160);
+            this.lb_Rooms.Size = new System.Drawing.Size(250, 160);
             this.lb_Rooms.TabIndex = 3;
+            // 
+            // btn_DeleteRoom
+            // 
+            this.btn_DeleteRoom.Location = new System.Drawing.Point(187, 257);
+            this.btn_DeleteRoom.Name = "btn_DeleteRoom";
+            this.btn_DeleteRoom.Size = new System.Drawing.Size(50, 23);
+            this.btn_DeleteRoom.TabIndex = 4;
+            this.btn_DeleteRoom.Text = "Oda Sil";
+            this.btn_DeleteRoom.UseVisualStyleBackColor = true;
+            this.btn_DeleteRoom.Click += new System.EventHandler(this.btn_DeleteRoom_Click);
             // 
             // CreateRoom
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(256, 271);
+            this.ClientSize = new System.Drawing.Size(256, 287);
+            this.Controls.Add(this.btn_DeleteRoom);
             this.Controls.Add(this.lb_Rooms);
             this.Controls.Add(this.btn_RoomAdd);
             this.Controls.Add(this.tb_RoomName);
@@ -92,5 +103,6 @@
         private System.Windows.Forms.TextBox tb_RoomName;
         private System.Windows.Forms.Button btn_RoomAdd;
         private System.Windows.Forms.ListBox lb_Rooms;
+        private System.Windows.Forms.Button btn_DeleteRoom;
     }
 }
