@@ -11,6 +11,7 @@ namespace MeetingRoom
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
+        public static MeetingRoomDBEntities db = new MeetingRoomDBEntities(); 
         [STAThread]
         static void Main()
         {
