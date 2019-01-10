@@ -16,5 +16,10 @@ namespace MeetingRoom.Forms
         {
             InitializeComponent();
         }
+
+        private void CreateMeeting_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
