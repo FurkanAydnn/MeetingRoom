@@ -29,25 +29,15 @@ namespace MeetingRoom.Forms
 
         private void CreateRoom_Load(object sender, EventArgs e)
         {
-            dgv_Rooms.DataSource = null;
-            dgv_Rooms.DataSource = db.MeetingRooms.Select(x => new
+            lb_Rooms.DataSource = null;
+            lb_Rooms.DisplayMember = "RoomName";
+            lb_Rooms.ValueMember = "RoomID";
+            lb_Rooms.DataSource = db.MeetingRooms.Select(x => new
             {
-                OdaId = x.RoomID,
-                OdaAdı = x.RoomName   
+                x.RoomName   
             })
             .ToList();
         }
 
-        private void btn_Back_Click(object sender, EventArgs e)
-        {
-            MeetingRoomMain f = new MeetingRoomMain();
-            f.Show();
-            this.Close();
-        }
-
-        private void CreateRoom_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            Application.Exit();
-        }
     }
 }
