@@ -24,6 +24,7 @@ namespace MeetingRoom.Forms
             meetingRooms.RoomName = tb_RoomName.Text;
             db.MeetingRooms.Add(meetingRooms);
             db.SaveChanges();
+            tb_RoomName.Clear();
             CreateRoom_Load(sender, e);
         }
 

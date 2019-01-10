@@ -23,9 +23,15 @@ namespace MeetingRoom
             new CreateMeeting().Show();
         }
 
-        private void btnCreateRoom_Click(object sender, EventArgs e)
+        private void tsb_CreateAndDeleteRooms_Click(object sender, EventArgs e)
         {
             CreateRoom form = new CreateRoom();
+            form.Show();
+        }
+
+        private void tsb_CreateAndDeleteCompanies_Click(object sender, EventArgs e)
+        {
+            CreateCompanies form = new CreateCompanies();
             form.Show();
         }
     }

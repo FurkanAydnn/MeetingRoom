@@ -117,30 +117,4 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <metadata name="toolStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="tsb_CreateAndDeleteRooms.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAGWSURBVEhL7dVLKwVhHMfxcSuXJLfCjohslB0lt4gsJFnY
-        uIVck06EDYoXYGdnoWyIXBa2Foo34AWwU14D39/M83DmmKlz6tkov/rkmf/Mef5znnnm8P7jMnV4wgva
-        VXCdY3waDyq4zjZsg1MVXCcXy9hBsQouo8lncGJorJqTFOARdnks1XQu7ZTjGWv+0U8WkDq5pXPJycY9
-        jvyjlHRDH9KdKXOYgiZR0yg6p2tmodRAc7z7RynRmq6jFbUYRLoZQ0Uw9KbRHwzDUfcV6K6GVMggedC3
-        qMci1CQLoSyhDHoW8ypkmGqsIgdd6EEoWssBNKPJHCfQAJs+jEIP02YcunYS+WasOTRXKDpRihEzFn2T
-        EiiayO6eXRVMGjEBNdBnelGFyAZ6U+OyB9vgTIWY6BlENjhEZzCMTCVuoR863XVctN31DH412DR/XWQf
-        oQYt6AiGkdF7cY4P48LU4tKG4WAYRPs/LkV4g11/6xWFiMv389TeP4DdOXpJLP1qbuEOWv8bXOMKl9hA
-        8vXJ9P9Du/JPx/O+ABmyVEqrfqr9AAAAAElFTkSuQmCC
-</value>
-  </data>
-  <data name="tsb_CreateAndDeleteCompanies.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAACnSURBVEhL1ZNBCoRQDEO9/+FGPJH+CmFCaJsKzmIeBNKY
-        6MqtYV86h/osPSZ7UafHTIf/84HO8z1Gh53ne8x0+NoHOs/3GB12nu8x06HtHUsoZQKdr3T/4dkDFuh8
-        p68Rqlyxey3AV3mgHneacyGAr/JAPe405wJT5YrdawG+ygP1uNOcCwF8lQfqcac5F5gqV+zeFgx2bwsG
-        u7cFg93D/Epp+JK28wKTW/JNkanrlQAAAABJRU5ErkJggg==
-</value>
-  </data>
 </root>
