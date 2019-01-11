@@ -35,6 +35,8 @@
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.tsb_CreateAndDeleteRooms = new System.Windows.Forms.ToolStripButton();
             this.tsb_CreateAndDeleteCompanies = new System.Windows.Forms.ToolStripButton();
+            this.tsb_CreateMeeting = new System.Windows.Forms.ToolStripButton();
+            this.tsb_CancelMeeting = new System.Windows.Forms.ToolStripButton();
             this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -47,30 +49,20 @@
             // 
             // btnCreateMeeting
             // 
-            this.btnCreateMeeting.Location = new System.Drawing.Point(535, 12);
+            this.btnCreateMeeting.Location = new System.Drawing.Point(0, 0);
             this.btnCreateMeeting.Name = "btnCreateMeeting";
-            this.btnCreateMeeting.Size = new System.Drawing.Size(82, 39);
-            this.btnCreateMeeting.TabIndex = 2;
-            this.btnCreateMeeting.Text = "Rezervasyon";
-            this.btnCreateMeeting.UseVisualStyleBackColor = true;
-            this.btnCreateMeeting.Click += new System.EventHandler(this.btnCreateMeeting_Click);
-            // 
-            // btnMeetingCancel
-            // 
-            this.btnMeetingCancel.Location = new System.Drawing.Point(535, 57);
-            this.btnMeetingCancel.Name = "btnMeetingCancel";
-            this.btnMeetingCancel.Size = new System.Drawing.Size(82, 39);
-            this.btnMeetingCancel.TabIndex = 3;
-            this.btnMeetingCancel.Text = "Rezervasyon İptal";
-            this.btnMeetingCancel.UseVisualStyleBackColor = true;
-            this.btnMeetingCancel.Click += new System.EventHandler(this.btnMeetingCancel_Click);
+            this.btnCreateMeeting.Size = new System.Drawing.Size(75, 23);
+            this.btnCreateMeeting.TabIndex = 5;
+           
             // 
             // toolStrip1
             // 
             this.toolStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tsb_CreateAndDeleteRooms,
-            this.tsb_CreateAndDeleteCompanies});
+            this.tsb_CreateAndDeleteCompanies,
+            this.tsb_CreateMeeting,
+            this.tsb_CancelMeeting});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Size = new System.Drawing.Size(629, 27);
@@ -94,6 +86,24 @@
             this.tsb_CreateAndDeleteCompanies.Size = new System.Drawing.Size(101, 24);
             this.tsb_CreateAndDeleteCompanies.Text = "Şirket Ekle/Sil";
             this.tsb_CreateAndDeleteCompanies.Click += new System.EventHandler(this.tsb_CreateAndDeleteCompanies_Click);
+            // 
+            // tsb_CreateMeeting
+            // 
+            this.tsb_CreateMeeting.Image = ((System.Drawing.Image)(resources.GetObject("tsb_CreateMeeting.Image")));
+            this.tsb_CreateMeeting.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsb_CreateMeeting.Name = "tsb_CreateMeeting";
+            this.tsb_CreateMeeting.Size = new System.Drawing.Size(92, 24);
+            this.tsb_CreateMeeting.Text = "Rezevasyon";
+            this.tsb_CreateMeeting.Click += new System.EventHandler(this.tsb_CreateMeeting_Click);
+            // 
+            // tsb_CancelMeeting
+            // 
+            this.tsb_CancelMeeting.Image = ((System.Drawing.Image)(resources.GetObject("tsb_CancelMeeting.Image")));
+            this.tsb_CancelMeeting.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsb_CancelMeeting.Name = "tsb_CancelMeeting";
+            this.tsb_CancelMeeting.Size = new System.Drawing.Size(122, 24);
+            this.tsb_CancelMeeting.Text = "Rezervasyon İptal";
+            this.tsb_CancelMeeting.Click += new System.EventHandler(this.tsb_CancelMeeting_Click);
             // 
             // MeetingRoomMain
             // 
@@ -121,6 +131,8 @@
         private System.Windows.Forms.ToolStrip toolStrip1;
         private System.Windows.Forms.ToolStripButton tsb_CreateAndDeleteRooms;
         private System.Windows.Forms.ToolStripButton tsb_CreateAndDeleteCompanies;
+        private System.Windows.Forms.ToolStripButton tsb_CreateMeeting;
+        private System.Windows.Forms.ToolStripButton tsb_CancelMeeting;
     }
 }
 

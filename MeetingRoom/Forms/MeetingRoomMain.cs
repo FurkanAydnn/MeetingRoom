@@ -18,11 +18,6 @@ namespace MeetingRoom
             InitializeComponent();
         }
 
-        private void btnCreateMeeting_Click(object sender, EventArgs e)
-        {
-            new CreateMeeting().Show();
-        }
-
         private void tsb_CreateAndDeleteRooms_Click(object sender, EventArgs e)
         {
             CreateRoom form = new CreateRoom();
@@ -34,8 +29,13 @@ namespace MeetingRoom
             CreateCompanies form = new CreateCompanies();
             form.Show();
         }
+        
+        private void tsb_CreateMeeting_Click(object sender, EventArgs e)
+        {
+            new CreateMeeting().Show();
+        }
 
-        private void btnMeetingCancel_Click(object sender, EventArgs e)
+        private void tsb_CancelMeeting_Click(object sender, EventArgs e)
         {
             new CancelMeeting().Show();
         }

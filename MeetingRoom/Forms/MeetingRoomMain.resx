@@ -143,4 +143,23 @@
         u7cFg93D/Epp+JK28wKTW/JNkanrlQAAAABJRU5ErkJggg==
 </value>
   </data>
+  <data name="tsb_CreateMeeting.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACLSURBVEhLxZbRCoAgDEX7/z8K+oOo6ItKp5ugUx+80wOD
+        czdt4FNbg8fVFbTJ6+oOqnO4+ozKf1sdICtJRq2f071fO+Df/wzaxL+/dq67YJT5C6wqCZh1Czij+uqA
+        GXXKIhGkUxaJcEb1iwGKdQs4o/rqgBl1yiIRpFMWiXBG9YsBivkLrMryr2Lbfx3AEGE1R12GAAAAAElF
+        TkSuQmCC
+</value>
+  </data>
+  <data name="tsb_CancelMeeting.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADYSURBVEhL5ZZbCsIwEEW7B3WPgrg2RfwR3IFYHxvSOYmZ
+        hpBJijZ+6IELN016J52G0q7ARXT2tshN1Hub5yh6NBLZ2YkpNZgE63pK9X5rAf0/eVuE/ufWVQt8yvcL
+        tNJgJuaPCqxFO9HMjTwL0V60cqM8owsQzjzfnLmI8Pvr2kZkoblqDNg54awhOIRfRfFTpWiumgLsPASj
+        WjhorpoCcVvQpAXicIJDu8I7sdBcNQacFubDruN2bUUWmqvGgKPIaYlbwlMRvnSjPKMLvMsPFmilln8V
+        3eEJ8ePqE3wUXDUAAAAASUVORK5CYII=
+</value>
+  </data>
 </root>
