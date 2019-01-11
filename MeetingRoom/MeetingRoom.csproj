@@ -201,7 +201,6 @@
       <DependentUpon>MeetingRoomDBModel.edmx</DependentUpon>
       <LastGenOutput>MeetingRoomDBModel.cs</LastGenOutput>
     </Content>
-    <None Include="Resources\iconfinder_add_user_1902270.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
