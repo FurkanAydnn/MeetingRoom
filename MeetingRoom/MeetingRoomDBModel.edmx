@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="MeetingRoomDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="MeetingRoomDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Companies">
           <Key>
             <PropertyRef Name="CompanyID" />
@@ -27,7 +27,7 @@
             <PropertyRef Name="HourID" />
           </Key>
           <Property Name="HourID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="Hour" Type="time" Precision="7" Nullable="false" />
+          <Property Name="Hour" Type="time" Precision="0" Nullable="false" />
         </EntityType>
         <EntityType Name="MeetingRooms">
           <Key>
@@ -144,8 +144,7 @@
             <End Role="Meetings" EntitySet="Meetings" />
           </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="MeetingRoomDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -174,7 +173,7 @@
             <PropertyRef Name="HourID" />
           </Key>
           <Property Name="HourID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="Hour" Type="Time" Nullable="false" Precision="7" />
+          <Property Name="Hour" Type="Time" Nullable="false" Precision="0" />
         </EntityType>
         <EntityType Name="MeetingRooms">
           <Key>
