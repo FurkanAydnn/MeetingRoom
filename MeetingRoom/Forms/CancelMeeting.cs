@@ -34,9 +34,9 @@ namespace MeetingRoom.Forms
             dgvMeetings.DataSource = Program.db.Meetings
                 .Select(x => new
                 {
-                    x.Date,
-                    x.Companies.CompanyName,
-                    x.MeetingRooms.RoomName,
+                    Tarih =x.Date,
+                    Şirket_Adı =x.Companies.CompanyName,
+                    Oda = x.MeetingRooms.RoomName,
 
                 })
                 .ToList();

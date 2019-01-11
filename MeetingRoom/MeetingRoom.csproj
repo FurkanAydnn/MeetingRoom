@@ -164,6 +164,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EntityDeploy Include="MeetingRoomDBModel.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
@@ -200,6 +201,7 @@
       <DependentUpon>MeetingRoomDBModel.edmx</DependentUpon>
       <LastGenOutput>MeetingRoomDBModel.cs</LastGenOutput>
     </Content>
+    <None Include="Resources\iconfinder_add_user_1902270.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
