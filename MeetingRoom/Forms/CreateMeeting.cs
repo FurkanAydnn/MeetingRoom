@@ -54,6 +54,8 @@ namespace MeetingRoom.Forms
             newMeeting.MeetingRoomID = (int)cbMeetingRoom.SelectedValue;
             Program.db.Meetings.Add(newMeeting);
             Program.db.SaveChanges();
+            MeetingRoomMain mrm = (MeetingRoomMain)Application.OpenForms["MeetingRoomMain"];
+            mrm.Meetings();
         }
     }
 }

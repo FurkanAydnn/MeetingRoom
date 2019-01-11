@@ -29,7 +29,7 @@ namespace MeetingRoom
             CreateCompanies form = new CreateCompanies();
             form.Show();
         }
-        
+
         private void tsb_CreateMeeting_Click(object sender, EventArgs e)
         {
             new CreateMeeting().Show();
@@ -38,6 +38,34 @@ namespace MeetingRoom
         private void tsb_CancelMeeting_Click(object sender, EventArgs e)
         {
             new CancelMeeting().Show();
+        }
+
+        public void Meetings()
+        {
+            flpRooms.Controls.Clear();
+            foreach (var item in Program.db.Meetings)
+            {
+                Button b = new Button();
+                b.Height = 100;
+                b.Width = 130;
+                b.Text = item.Companies.CompanyName;
+                flpRooms.Controls.Add(b);
+                b.Click += new EventHandler(b_Click);
+            }
+        }
+
+        private void b_Click(object sender, EventArgs e)
+        {
+            //Button button = sender as Button;
+          
+            //    string content = Description;
+            //    content += item.Date;
+
+        }
+
+        private void MeetingRoomMain_Load(object sender, EventArgs e)
+        {
+            Meetings();
         }
     }
 }

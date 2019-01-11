@@ -53,7 +53,13 @@
             this.btnCreateMeeting.Name = "btnCreateMeeting";
             this.btnCreateMeeting.Size = new System.Drawing.Size(75, 23);
             this.btnCreateMeeting.TabIndex = 5;
-           
+            // 
+            // btnMeetingCancel
+            // 
+            this.btnMeetingCancel.Location = new System.Drawing.Point(0, 0);
+            this.btnMeetingCancel.Name = "btnMeetingCancel";
+            this.btnMeetingCancel.Size = new System.Drawing.Size(75, 23);
+            this.btnMeetingCancel.TabIndex = 5;
             // 
             // toolStrip1
             // 
@@ -116,6 +122,7 @@
             this.Controls.Add(this.flpRooms);
             this.Name = "MeetingRoomMain";
             this.Text = "Toplantı Odası";
+            this.Load += new System.EventHandler(this.MeetingRoomMain_Load);
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             this.ResumeLayout(false);
