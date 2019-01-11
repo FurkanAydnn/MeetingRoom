@@ -34,10 +34,10 @@ namespace MeetingRoom.Forms
             dgvMeetings.DataSource = Program.db.Meetings
                 .Select(x => new
                 {
-                    Tarih =x.Date,
-                    Şirket_Adı =x.Companies.CompanyName,
+                    ID = x.MeetingID,
+                    Tarih = x.Date,
+                    Şirket_Adı = x.Companies.CompanyName,
                     Oda = x.MeetingRooms.RoomName,
-
                 })
                 .ToList();
         }
@@ -50,18 +50,45 @@ namespace MeetingRoom.Forms
             {
                 item.Width = 80;
             }
+            dgvMeetings.Columns[0].Visible = false;
         }
 
         private void SetLabels()
         {
-            foreach (DataGridViewRow row in dgvMeetings.SelectedRows)
+            if (dgvMeetings.SelectedRows is null)
             {
-                lblCompanyName.Text = row.Cells[1].Value.ToString();
-                lblDate.Text = ((DateTime)row.Cells[0].Value).ToString("dd.MM.yyy");
+                foreach (DataGridViewRow row in dgvMeetings.SelectedRows)
+                {
+                    lblCompanyName.Text = row.Cells["Şirket_Adı"].Value.ToString();
+                    lblDate.Text = ((DateTime)row.Cells["Tarih"].Value).ToString("dd.MM.yyy");
+                    lblHour.Text = "";
+                    lblRoom.Text = row.Cells["Oda"].Value.ToString();
+                }
+            }
+            else
+            {
+                lblCompanyName.Text = "";
+                lblDate.Text = "";
                 lblHour.Text = "";
-                lblRoom.Text = row.Cells[2].Value.ToString();
+                lblRoom.Text = "";
             }
 
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            foreach (DataGridViewRow item in dgvMeetings.SelectedRows)
+            {
+                int selectedID = (int)item.Cells["ID"].Value;
+                Meetings selectedMeeting = (from r in Program.db.Meetings
+                                            where r.MeetingID == selectedID
+                                            select r).SingleOrDefault();
+                Program.db.Meetings.Remove(selectedMeeting);
+                Program.db.SaveChanges();
+
+                GetCompaniesForDGV();
+                SetLabels();
+            }
         }
     }
 }
