@@ -62,7 +62,8 @@ namespace MeetingRoom.Forms
         {
             GetHours();
         }
-        private void GetHours() {
+        private void GetHours()
+        {
             //var hourList = (from meeting in Program.db.Meetings
             //                join hour in Program.db.Hours
             //                on meeting.HourID equals hour.HourID
@@ -80,8 +81,10 @@ namespace MeetingRoom.Forms
             foreach (var item in hourList)
             {
                 RadioButton rbtn = new RadioButton();
-                rbtn.Width = 100;
-                rbtn.Text = item.Hour.ToString();
+                rbtn.Margin = new Padding(1);
+                rbtn.Width = 70;
+                rbtn.Font = new Font("Georgia", 10);
+                //rbtn.Text = ((DateTime)item.Hour).ToString("HH:mm");
                 flpHours.Controls.Add(rbtn);
             }
         }

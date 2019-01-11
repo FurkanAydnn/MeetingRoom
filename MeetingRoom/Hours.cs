@@ -14,7 +14,16 @@ namespace MeetingRoom
     
     public partial class Hours
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public Hours()
+        {
+            this.Meetings = new HashSet<Meetings>();
+        }
+    
         public int HourID { get; set; }
-        public System.TimeSpan Hour { get; set; }
+        public int Hour { get; set; }
+    
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Meetings> Meetings { get; set; }
     }
 }
