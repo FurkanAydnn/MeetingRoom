@@ -17,13 +17,21 @@ namespace MeetingRoom.Forms
             InitializeComponent();
         }
 
-        MeetingRoomDBEntities db = new MeetingRoomDBEntities();
         private void btn_RoomAdd_Click(object sender, EventArgs e)
         {
             MeetingRooms meetingRooms = new MeetingRooms();
             meetingRooms.RoomName = tb_RoomName.Text;
-            db.MeetingRooms.Add(meetingRooms);
-            db.SaveChanges();
+            List<string> rooms = new List<string>();
+            foreach (var item in Program.db.MeetingRooms)
+            {
+                rooms.Add(item.RoomName);
+            }
+
+            if ((rooms.Contains(tb_RoomName.Text)))
+                MessageBox.Show("Var olan bir oda eklediniz.");
+            else
+                Program.db.MeetingRooms.Add(meetingRooms);
+            Program.db.SaveChanges();
             tb_RoomName.Clear();
             CreateRoom_Load(sender, e);
         }
@@ -33,7 +41,7 @@ namespace MeetingRoom.Forms
             lb_Rooms.DataSource = null;
             lb_Rooms.DisplayMember = "RoomName";
             lb_Rooms.ValueMember = "RoomID";
-            lb_Rooms.DataSource = db.MeetingRooms.Select(x => new
+            lb_Rooms.DataSource = Program.db.MeetingRooms.Select(x => new
             {
                 x.RoomName,
                 x.RoomID
@@ -43,11 +51,11 @@ namespace MeetingRoom.Forms
 
         private void btn_DeleteRoom_Click(object sender, EventArgs e)
         {
-            var room = (from r in db.MeetingRooms
-                        where r.RoomID == (int)lb_Rooms.SelectedValue
-                        select r).SingleOrDefault();
-            db.MeetingRooms.Remove(room);
-            db.SaveChanges();
+            MeetingRooms selectedRoom = (from r in Program.db.MeetingRooms
+                                         where r.RoomID == (int)lb_Rooms.SelectedValue
+                                         select r).SingleOrDefault();
+            Program.db.MeetingRooms.Remove(selectedRoom);
+            Program.db.SaveChanges();
 
             CreateRoom_Load(sender, e);
         }
