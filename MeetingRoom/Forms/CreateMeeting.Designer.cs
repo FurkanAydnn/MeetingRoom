@@ -133,6 +133,7 @@
             this.cbMeetingRoom.Name = "cbMeetingRoom";
             this.cbMeetingRoom.Size = new System.Drawing.Size(142, 21);
             this.cbMeetingRoom.TabIndex = 11;
+            this.cbMeetingRoom.SelectedIndexChanged += new System.EventHandler(this.cbMeetingRoom_SelectedIndexChanged);
             // 
             // label4
             // 

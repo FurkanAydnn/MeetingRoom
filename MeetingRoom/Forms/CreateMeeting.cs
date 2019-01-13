@@ -93,7 +93,12 @@ namespace MeetingRoom.Forms
                     foreach (RadioButton rbtn in flpHours.Controls)
                     {
                         if (meeting.Hour.ToString() == rbtn.Text.Replace(":00", ""))
-                            rbtn.Visible = false;
+                        {
+                            if (meeting.MeetingRooms.RoomName == cbMeetingRoom.Text)
+                                rbtn.Visible = false;
+                            else
+                                rbtn.Visible = true;
+                        }
                     }
                 }
             }
@@ -114,6 +119,11 @@ namespace MeetingRoom.Forms
                 rbtn.Text = hour.ToString() + ":00";
                 flpHours.Controls.Add(rbtn);
             }
+        }
+
+        private void cbMeetingRoom_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            dtpDate_ValueChanged(sender, e);
         }
     }
 }

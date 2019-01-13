@@ -18,6 +18,13 @@ namespace MeetingRoom
             InitializeComponent();
         }
 
+        int now = DateTime.Now.Hour;
+
+        private void MeetingRoomMain_Load(object sender, EventArgs e)
+        {
+            Meetings();
+        }
+
         private void tsb_CreateAndDeleteRooms_Click(object sender, EventArgs e)
         {
             CreateRoom form = new CreateRoom();
@@ -43,29 +50,62 @@ namespace MeetingRoom
         public void Meetings()
         {
             flpRooms.Controls.Clear();
-            foreach (var item in Program.db.Meetings)
+            foreach (var room in Program.db.MeetingRooms)
             {
                 Button b = new Button();
                 b.Height = 100;
                 b.Width = 130;
-                b.Text = item.Companies.CompanyName;
+                bool isThereMeeting = CheckMeeting(room.RoomName);
+                var meeting = Program.db.Meetings
+                    .Where(x => x.MeetingRoomID == room.RoomID && (x.Hour == now || x.Hour == now - 1))
+                    .FirstOrDefault();
+                if (isThereMeeting)
+                {
+                    b.Text = room.RoomName;
+                    b.Text += SetButtonText(meeting);
+                    b.Name = meeting.MeetingID.ToString();
+                }
+                else
+                    b.Text = room.RoomName + "\n Oda Boş";
                 flpRooms.Controls.Add(b);
                 b.Click += new EventHandler(b_Click);
             }
         }
 
-        private void b_Click(object sender, EventArgs e)
+        private bool CheckMeeting(string roomName)
         {
-            //Button button = sender as Button;
-          
-            //    string content = Description;
-            //    content += item.Date;
-
+            List<Meetings> AllMeetings = Program.db.Meetings
+                .Where(x => (x.Hour == now || x.Hour == now - 1) && x.Date == DateTime.Today && x.MeetingRooms.RoomName == roomName)
+                .ToList();
+            if (AllMeetings.Count > 0)
+                return true;
+            else
+                return false;
         }
 
-        private void MeetingRoomMain_Load(object sender, EventArgs e)
+        private void b_Click(object sender, EventArgs e)
         {
-            Meetings();
+            Button button = sender as Button;
+            if (button.Name != "")
+            {
+                int selectedID = Convert.ToInt32(button.Name);
+
+                Meetings MeetingOnButton = Program.db.Meetings
+                    .Where(x => x.MeetingID == selectedID)
+                    .FirstOrDefault();
+                MessageBox.Show(MeetingOnButton.Description);
+            }
+        }
+
+        private string SetButtonText(Meetings meeting)
+        {
+            string buttonText = Environment.NewLine;
+            buttonText += meeting.Companies.CompanyName;
+            buttonText += Environment.NewLine;
+            buttonText += meeting.Date.ToShortDateString();
+            buttonText += Environment.NewLine;
+            buttonText += meeting.Hour + ":00" + " - " + (meeting.Hour + 2) + ":00";
+            return buttonText;
         }
     }
 }
