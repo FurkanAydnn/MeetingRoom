@@ -29,7 +29,6 @@ namespace MeetingRoom
     
         public virtual DbSet<Companies> Companies { get; set; }
         public virtual DbSet<Employees> Employees { get; set; }
-        public virtual DbSet<Hours> Hours { get; set; }
         public virtual DbSet<MeetingRooms> MeetingRooms { get; set; }
         public virtual DbSet<Meetings> Meetings { get; set; }
         public virtual DbSet<sysdiagrams> sysdiagrams { get; set; }

@@ -60,33 +60,8 @@ namespace MeetingRoom.Forms
 
         private void dtpDate_ValueChanged(object sender, EventArgs e)
         {
-            GetHours();
-        }
-        private void GetHours()
-        {
-            //var hourList = (from meeting in Program.db.Meetings
-            //                join hour in Program.db.Hours
-            //                on meeting.HourID equals hour.HourID
-            //                select new
-            //                {
-            //                    hour.Hour,
-            //                    hour.HourID
-            //                }).ToList();
-            var hourList = Program.db.Hours.Select(x => new
-            {
-                x.Hour,
-                x.HourID
-            }).ToList();
 
-            foreach (var item in hourList)
-            {
-                RadioButton rbtn = new RadioButton();
-                rbtn.Margin = new Padding(1);
-                rbtn.Width = 70;
-                rbtn.Font = new Font("Georgia", 10);
-                //rbtn.Text = ((DateTime)item.Hour).ToString("HH:mm");
-                flpHours.Controls.Add(rbtn);
-            }
         }
+
     }
 }

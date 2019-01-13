@@ -106,9 +106,6 @@
     <Compile Include="Forms\MeetingRoomMain.Designer.cs">
       <DependentUpon>MeetingRoomMain.cs</DependentUpon>
     </Compile>
-    <Compile Include="Hours.cs">
-      <DependentUpon>MeetingRoomDBModel.tt</DependentUpon>
-    </Compile>
     <Compile Include="MeetingRoomDBModel.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
