@@ -21,6 +21,7 @@ namespace MeetingRoom.Forms
         {
             GetCompaniesForDGV();
             SetDGVDisplay();
+            SetLabels();
         }
 
         private void dgvMeetings_SelectionChanged(object sender, EventArgs e)
@@ -36,6 +37,7 @@ namespace MeetingRoom.Forms
                 {
                     ID = x.MeetingID,
                     Tarih = x.Date,
+                    Saat = x.Hour,
                     Şirket_Adı = x.Companies.CompanyName,
                     Oda = x.MeetingRooms.RoomName,
                 })
@@ -55,13 +57,13 @@ namespace MeetingRoom.Forms
 
         private void SetLabels()
         {
-            if (dgvMeetings.SelectedRows is null)
+            if (!(dgvMeetings.SelectedRows is null))
             {
                 foreach (DataGridViewRow row in dgvMeetings.SelectedRows)
                 {
                     lblCompanyName.Text = row.Cells["Şirket_Adı"].Value.ToString();
                     lblDate.Text = ((DateTime)row.Cells["Tarih"].Value).ToString("dd.MM.yyy");
-                    lblHour.Text = "";
+                    lblHour.Text = row.Cells["Saat"].Value.ToString() + ":00";
                     lblRoom.Text = row.Cells["Oda"].Value.ToString();
                 }
             }
@@ -88,6 +90,9 @@ namespace MeetingRoom.Forms
 
                 GetCompaniesForDGV();
                 SetLabels();
+
+                MeetingRoomMain mrm = (MeetingRoomMain)Application.OpenForms["MeetingRoomMain"];
+                mrm.Meetings();
             }
         }
     }
