@@ -12,6 +12,15 @@ namespace MeetingRoom.Forms
 {
     public partial class CreateMeeting : Form
     {
+        public enum Hours
+        {
+            h1 = 8,
+            h2 = 10,
+            h3 = 12,
+            h4 = 14,
+            h5 = 16
+        }
+
         public CreateMeeting()
         {
             InitializeComponent();
@@ -21,6 +30,8 @@ namespace MeetingRoom.Forms
         {
             GetCompanies();
             GetMeetingRooms();
+            GetHours();
+            dtpDate_ValueChanged(sender, e);
         }
 
         private void GetMeetingRooms()
@@ -52,16 +63,57 @@ namespace MeetingRoom.Forms
             newMeeting.Date = dtpDate.Value;
             newMeeting.Description = rtbDescription.Text;
             newMeeting.MeetingRoomID = (int)cbMeetingRoom.SelectedValue;
+            newMeeting.Hour = GetSelectedRbtn();
             Program.db.Meetings.Add(newMeeting);
             Program.db.SaveChanges();
             MeetingRoomMain mrm = (MeetingRoomMain)Application.OpenForms["MeetingRoomMain"];
             mrm.Meetings();
         }
 
-        private void dtpDate_ValueChanged(object sender, EventArgs e)
+        private int GetSelectedRbtn()
         {
-
+            int selectedHour = 0;
+            foreach (RadioButton rbtn in flpHours.Controls)
+            {
+                if (rbtn.Checked)
+                    selectedHour = Convert.ToInt32(rbtn.Text.Replace(":00", ""));
+            }
+            return selectedHour;
         }
 
+        private void dtpDate_ValueChanged(object sender, EventArgs e)
+        {
+            List<Meetings> MeetinsgAtDate = Program.db.Meetings
+                .Where(x => x.Date == dtpDate.Value.Date)
+                .ToList();
+            if (MeetinsgAtDate.Count != 0)
+            {
+                foreach (Meetings meeting in MeetinsgAtDate)
+                {
+                    foreach (RadioButton rbtn in flpHours.Controls)
+                    {
+                        if (meeting.Hour.ToString() == rbtn.Text.Replace(":00", ""))
+                            rbtn.Visible = false;
+                    }
+                }
+            }
+            else
+            {
+                foreach (RadioButton rbtn in flpHours.Controls)
+                {
+                    rbtn.Visible = true;
+                }
+            }
+        }
+
+        public void GetHours()
+        {
+            foreach (int hour in Enum.GetValues(typeof(Hours)))
+            {
+                RadioButton rbtn = new RadioButton();
+                rbtn.Text = hour.ToString() + ":00";
+                flpHours.Controls.Add(rbtn);
+            }
+        }
     }
 }

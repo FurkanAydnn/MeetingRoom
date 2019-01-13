@@ -35,10 +35,10 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.flpHours = new System.Windows.Forms.FlowLayoutPanel();
             this.btnCreateMeeting = new System.Windows.Forms.Button();
             this.cbMeetingRoom = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.flpHours = new System.Windows.Forms.FlowLayoutPanel();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -104,6 +104,18 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Saat: ";
             // 
+            // flpHours
+            // 
+            this.flpHours.AutoScroll = true;
+            this.flpHours.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.flpHours.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
+            this.flpHours.Location = new System.Drawing.Point(3, 16);
+            this.flpHours.Margin = new System.Windows.Forms.Padding(1);
+            this.flpHours.Name = "flpHours";
+            this.flpHours.Size = new System.Drawing.Size(147, 105);
+            this.flpHours.TabIndex = 0;
+            this.flpHours.WrapContents = false;
+            // 
             // btnCreateMeeting
             // 
             this.btnCreateMeeting.Location = new System.Drawing.Point(352, 170);
@@ -130,18 +142,6 @@
             this.label4.Size = new System.Drawing.Size(81, 13);
             this.label4.TabIndex = 12;
             this.label4.Text = "Toplantı Odası: ";
-            // 
-            // flpHours
-            // 
-            this.flpHours.AutoScroll = true;
-            this.flpHours.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flpHours.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.flpHours.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.flpHours.Location = new System.Drawing.Point(3, 16);
-            this.flpHours.Name = "flpHours";
-            this.flpHours.Size = new System.Drawing.Size(147, 105);
-            this.flpHours.TabIndex = 0;
-            this.flpHours.WrapContents = false;
             // 
             // CreateMeeting
             // 
